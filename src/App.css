@@ -1,42 +1,81 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  box-sizing: border-box;
+}
+body,
+html {
+  font-family: "Karla", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* .App {
+  display: flex;
+  width: 100vw;
+} */
+
+.header {
+  width: 100vw;
+  margin: 0;
+  background: linear-gradient(90deg, rgb(69, 141, 119), rgb(98, 192, 162));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 2em 0.5em 1em;
+  color: aliceblue;
+  text-shadow: 0px 0px 4px rgb(69, 141, 119);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header--title {
+  flex: 1;
+  text-align: left;
+  padding-left: 1em;
+  color: aliceblue;
+  text-shadow: 0px 0px 4px rgb(69, 141, 119);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.header--img-container {
+  padding: 0.5em;
+  display: flex;
+  width: 150px;
+  height: auto;
 }
 
-.card {
-  padding: 2em;
+.header--img {
+  width: 100%;
+  border-radius: 5px;
 }
 
-.read-the-docs {
-  color: #888;
+.form {
+  padding: 3em 3em;
+  display: grid;
+  grid-template: 40px 40px / 1fr 1fr;
+  gap: 1em;
+}
+
+.form--input {
+  font-family: inherit;
+  padding: 0;
+  font-size: 1rem;
+  color: rgb(53, 53, 53);
+  border-radius: 5px;
+  border: 1px solid rgb(161, 161, 161);
+  text-indent: 0.5em;
+}
+.form--button {
+  grid-column: 1 /-1;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgb(53, 53, 53);
+  background: linear-gradient(
+    90deg,
+    rgb(69, 141, 119) 1%,
+    rgb(98, 192, 162) 100%
+  );
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: aliceblue;
+  font-weight: bold;
+  letter-spacing: 1.5px;
 }
